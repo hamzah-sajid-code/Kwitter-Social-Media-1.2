@@ -56,3 +56,12 @@ function back(){
   window.location = 'kwitter_room.html';
 }
 document.getElementById('roomname').innerHTML = "#"+roomid;
+window.addEventListener('keydown', ejd)
+function ejd(e) {
+            key = e.keyCode;
+            console.log(key)
+            if (key == '13') {
+                console.log('Enter Pressed');
+                send();
+            }
+        }
