@@ -36,12 +36,15 @@ getData();
 
 function send() {
   messageval = document.getElementById('msg').value;
-  document.getElementById('msg').value = "";
-  firebase.database().ref(roomid).child('/').push({
-    name: usernamesa,
-    message: messageval,
-    like: 0
-  });
+  if (messageval != "") {
+    console.log('Nop !!!')
+    document.getElementById('msg').value = "";
+    firebase.database().ref(roomid).child('/').push({
+      name: usernamesa,
+      message: messageval,
+      like: 0
+    });
+  }
 }
 
 function logout() {
